@@ -15,7 +15,7 @@ export default function NavLinks() {
 					<NavLink
 						to={to}
 						className={({ isActive }) =>
-							`hover:bg-[#f8df00] hover:text-[#292929] p-2 border hover:border-[#292929] text-[#292929] uppercase transition duration-150 ${
+							`hover:bg-[#f8df00] rounded-lg hover:text-[#292929] p-2 border hover:border-[#292929] text-[#292929] uppercase transition duration-150 ${
 								isActive
 									? "bg-[#ffd900] border-[#292929] md:text-[#292929]"
 									: "md:text-white border-transparent"
