@@ -5,7 +5,7 @@ import Card from "../UI/Card";
 export default function User({ user }) {
 	return (
 		<li className="group m-4 w-[calc(45%-2rem)] min-w-70">
-			<Card>
+			<Card styles="p-0!">
 				<Link
 					to={`/user/${user.id}/places`}
 					className="flex items-center bg-[#292929] hover:bg-[#ffd900] p-4 w-full text-white transition duration-150"
