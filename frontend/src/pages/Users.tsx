@@ -1,5 +1,5 @@
-import Card from "../../components/UI/Card";
-import UsersList from "../../components/Users/UsersList";
+import Card from "../components/UI/Card";
+import UsersList from "../components/Users/UsersList";
 
 class User {
 	id: string;
