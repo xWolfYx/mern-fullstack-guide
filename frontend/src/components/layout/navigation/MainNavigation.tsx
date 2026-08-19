@@ -33,7 +33,7 @@ export default function MainNavigation() {
 			</MainHeader>
 			<AnimatePresence>
 				{isDrawerOpen && (
-					<Backdrop onClose={closeDrawer}>
+					<Backdrop isOpen={isDrawerOpen} onClose={closeDrawer}>
 						<SideDrawer onCloseDrawer={closeDrawer}>
 							<nav className="h-full">
 								<NavLinks />
