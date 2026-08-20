@@ -4,15 +4,15 @@ export default function Button({
 	children,
 	styles,
 	type,
-	onMapOpen,
+	onClick,
 }: {
 	children: React.ReactNode;
 	styles?: string;
 	type?: "link" | "router";
-	onMapOpen?: () => void;
+	onClick?: () => void;
 }) {
 	const defaultStyle =
-		"hover:bg-[#ff0055] py-2 border uppercase hover:scale-110 transition duration-150 cursor-pointer  text-center  hover:text-white   rounded-2xl  border-[#292929] hover:border-transparent";
+		"hover:bg-[#ff0055] px-4 py-2 border border-[#292929] hover:border-transparent rounded-2xl hover:text-white text-center uppercase hover:scale-110 transition duration-150 cursor-pointer";
 
 	if (type === "link")
 		return (
@@ -30,7 +30,7 @@ export default function Button({
 		<button
 			type="button"
 			className={`${defaultStyle} hover:bg-rose-600`}
-			onClick={onMapOpen}
+			onClick={onClick}
 		>
 			{children}
 		</button>
