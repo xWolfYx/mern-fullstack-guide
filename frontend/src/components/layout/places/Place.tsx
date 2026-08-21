@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "../../UI/Button";
 import Card from "../../UI/Card";
+import MapView from "../../UI/Map";
 import Modal from "../../UI/Modal";
 
 export default function Place({
@@ -25,6 +26,8 @@ export default function Place({
 	const openMapHandler = () => setShowMap(true);
 	const closeMapHandler = () => setShowMap(false);
 
+	const [lat, lng] = location.split(",").map((c) => Number(c));
+
 	return (
 		<>
 			<Modal
@@ -35,7 +38,9 @@ export default function Place({
 				footerStyles="text-right"
 				footer={<Button onClick={closeMapHandler}>Close</Button>}
 			>
-				<div className="w-full h-60">The map!</div>
+				<div className="w-full h-60">
+					<MapView lat={Number(lat)} lng={Number(lng)} zoom={16} />
+				</div>
 			</Modal>
 
 			<li className="mx-0 my-4">
