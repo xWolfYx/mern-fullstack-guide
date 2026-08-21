@@ -8,7 +8,7 @@ setOptions({
 	v: "weekly",
 });
 
-export default function MapView({ lat, lng }) {
+export default function MapView({ lat, lng, zoom }) {
 	const mapRef = useRef(null);
 
 	useEffect(() => {
@@ -19,7 +19,7 @@ export default function MapView({ lat, lng }) {
 			if (mapRef.current) {
 				const map = new GoogleMap(mapRef.current, {
 					center: { lat, lng },
-					zoom: 10,
+					zoom,
 					mapId: "a79a1ffbac31fa715e8db8c2",
 				});
 
@@ -31,7 +31,7 @@ export default function MapView({ lat, lng }) {
 		}
 
 		initMap().catch((err) => console.log(err));
-	}, [lat, lng]);
+	}, [lat, lng, zoom]);
 
 	return <div className="size-full" ref={mapRef}></div>;
 }
