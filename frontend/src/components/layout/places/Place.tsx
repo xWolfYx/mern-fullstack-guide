@@ -11,6 +11,14 @@ export default function Place({
 	address,
 	creatorId,
 	location,
+}: {
+	id: string;
+	imageUrl: string;
+	title: string;
+	description: string;
+	address: string;
+	creatorId: string;
+	location: string;
 }) {
 	const [showMap, setShowMap] = useState(false);
 
